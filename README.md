@@ -1,1 +1,1 @@
-https://userresearchsurveys.github.io/surveys/
+https://uxrhub.github.io/surveys/
