@@ -38,6 +38,8 @@ p.completion-time {
 }
 
 .card {
+    position: relative;
+    z-index: 1;
     background-color: #efe6dd;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -68,7 +70,6 @@ p.completion-time {
 
     display: flex;
     flex-direction: column;
-    /* gap: 6px; */
 }
 
 .card-txt h3 { margin: 10px 0; }
@@ -80,16 +81,15 @@ p.completion-time {
     font-size: 0.96rem;
     font-weight: 570;
     font-style:italic;
+    padding-top: 8px;
     margin-top: auto;
 }
 
 .coming-soon {
     position: relative;
-    pointer-events: none;
-    cursor: default
 }
 .coming-soon .card::after {
-    content: "🚧 Coming soon...";
+    content: "🚧 Coming Soon...";
     position: absolute;
     inset: 0;
     background: #d6cec6;
@@ -100,6 +100,9 @@ p.completion-time {
     justify-content: center;
     text-align: center;
     z-index: 2;
+}
+.coming-soon:hover .card::after {
+    transform: scale(1.001);
 }
 
 @media (max-width: 768px) {
