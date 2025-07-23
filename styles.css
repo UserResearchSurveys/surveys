@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    margin-bottom: 50px;
+}
+
+body {
+    background-color: #f4f3f1;
+    font-family: 'Work Sans', sans-serif;
+    margin: 0;
+    padding: 1.5rem 1.5rem 2.5rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.05rem;
+}
+
+p.description { color: #555; }
+p.completion-time {
+    font-style: italic;
+    color: #555;
+}
+
+.flex-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 350px);
+    justify-content: center;
+    gap: 40px;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+}
+
+.card {
+    background-color: #efe6dd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card-img {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+}
+
+.card-txt {
+    padding: 20px 30px;
+    flex-grow: 1;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    /* gap: 6px; */
+}
+
+.card-txt h3 { margin: 10px 0; }
+.card-txt p { 
+    margin: 6px 0;
+    font-size: 0.96rem;
+}
+.card-txt p.note {
+    font-size: 0.96rem;
+    font-weight: 570;
+    font-style:italic;
+    margin-top: auto;
+}
+
+.coming-soon {
+    position: relative;
+    pointer-events: none;
+    cursor: default
+}
+.coming-soon .card::after {
+    content: "🚧 Coming soon...";
+    position: absolute;
+    inset: 0;
+    background: #d6cec6;
+    font-size: 1.4rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .flex-container {
+        grid-template-columns: 1fr;
+        padding: 0 5%;
+        box-sizing: border-box;
+    }
+
+    .card-link {
+        width: 100%;
+    }
+}

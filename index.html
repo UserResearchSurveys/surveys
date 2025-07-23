@@ -8,107 +8,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        header {
-            margin-bottom: 40px;
-        }
-
-        body {
-            background-color: #f4f3f1;
-            font-family: 'Work Sans', sans-serif;
-            margin: 0;
-            padding: 1.5rem 1.5rem 2.5rem;
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 2.05rem;
-        }
-        
-        p.description { color: #555; }
-        p.completion-time {
-            font-style: italic;
-            color: #555;
-        }
-
-        .flex-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, 350px);
-            justify-content: center;
-            gap: 40px;
-        }
-
-        .card-link {
-            text-decoration: none;
-            color: inherit;
-            height: 100%;
-        }
-
-        .card {
-            background-color: #efe6dd;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 100%;
-            height: 100%;
-            min-height: 500px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .card:hover {
-            transform: scale(1.03);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-            cursor: pointer;
-        }
-
-        .card-img {
-            width: 100%;
-            height: 30vh;
-            object-fit: cover;
-        }
-
-        .card-txt {
-            padding: 20px 30px;
-            flex-grow: 1;
-            text-align: center;
-        }
-
-        .card-txt h3 { margin: 15px 0; }
-        .card-txt p { font-size: 0.96rem; }
-
-        .coming-soon { position: relative }
-        .coming-soon::after {
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.11);
-            content: ''
-        }
-
-        @media (max-width: 768px) {
-            .flex-container {
-                grid-template-columns: 1fr;
-                padding: 0 5%;
-                box-sizing: border-box;
-            }
-
-            .card-link {
-                width: 100%;
-            }
-        }
-
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <h1>User Research Surveys</h1>
         <p style="text-align:center;">
-            Please fill out one or both forms. <br>
+            Please fill out any applicable forms. <br>
             All responses are anonymous and appreciated! 😄
         </p>
     </header>
@@ -138,19 +44,29 @@
                         Help design an app & website for people to find out 
                         who represents them in state and federal government.
                     </p>
-                    <p class="note" style="font-weight:570; font-style:italic;">
+                    <p class="note">
                         Note: This survey is for people currently living in the U.S.
                     </p>
                 </div>
             </div>
         </a>
 
-        <div class="card card-link coming-soon">
-            <img src="assets/tractor.png" class="card-img">
-            <div class="card-txt" style="justify-content:flex-start;">
-                <h3 style="color:#555;">Coming soon...</h3>
+        <a href="coming-soon.html" class="card-link coming-soon">
+            <div class="card">
+                <img src="assets/epic.jpg" class="card-img">
+                <div class="card-txt">
+                    <h3>🖤 Every Place I Cry Merch</h3>
+                    <p class="completion-time">10 – 15 minutes</p>
+                    <p class="description">
+                        Help design an app & website for EPIC fans to discover and purchase merch.
+                    </p>
+                    <p class="note">
+                        Note: This survey is for people familiar with the band Every Place I Cry.
+                    </p>
+                </div>
             </div>
-        </div>
+        </a>
+
     </div>
 </body>
 </html>
