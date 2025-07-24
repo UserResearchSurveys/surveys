@@ -136,19 +136,22 @@ footer {
 /* Emoji animation */
 .falling-emoji {
     position: fixed;
+    top: 0;
+    left: 0;
     font-size: 2rem;
     animation: fall 2.5s linear forwards;
     pointer-events: none;
     z-index: 3;
+    will-change: transform, opacity;
 }
 
 @keyframes fall {
-    0% {
-        top: -50px;
+    from {
+        transform: translateY(-50px);
         opacity: 1;
     }
-    100% {
-        top: 100vh;
+    to {
+        transform: translateY(100vh);
         opacity: 0;
     }
 }
@@ -194,7 +197,7 @@ footer {
 }
 
 .fun-button:active {
-  filter: brightness(0.85);
+    filter: brightness(0.85);
 }
 
 @media (hover: hover) and (pointer: fine) {

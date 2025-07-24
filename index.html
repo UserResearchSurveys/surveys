@@ -83,7 +83,10 @@
     emoji.textContent = randomEmoji;
 
     // random horizontal position
-    emoji.style.left = Math.random() * window.innerWidth + 'px';
+    const screenWidth = window.innerWidth;
+    const minX = screenWidth * 0.1; // 10% from the left
+    const maxX = screenWidth * 0.9; // 90% from the left
+    emoji.style.left = minX + Math.random() * (maxX - minX) + 'px';
 
     document.body.appendChild(emoji);
 
