@@ -88,6 +88,9 @@ p.completion-time {
 .coming-soon {
     position: relative;
 }
+.coming-soon img {
+    opacity: 0;
+}
 .coming-soon .card::after {
     content: "🚧 Coming Soon...";
     position: absolute;
@@ -100,9 +103,6 @@ p.completion-time {
     justify-content: center;
     text-align: center;
     z-index: 2;
-}
-.coming-soon:hover .card::after {
-    transform: scale(1.001);
 }
 
 @media (max-width: 768px) {
