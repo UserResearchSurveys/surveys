@@ -53,20 +53,43 @@
 
         <a href="coming-soon.html" class="card-link coming-soon">
             <div class="card">
-                <img src="assets/epic.jpg" class="card-img">
+                <img src="assets/bank-app.png" class="card-img">
                 <div class="card-txt">
-                    <h3>🖤 Every Place I Cry Merch</h3>
+                    <h3>💸 Personal Banking</h3>
                     <p class="completion-time">10 – 15 minutes</p>
                     <p class="description">
-                        Help design an app & website for EPIC fans to discover and purchase merch.
-                    </p>
-                    <p class="note">
-                        Note: This survey is for people familiar with the band Every Place I Cry.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
                 </div>
             </div>
         </a>
-
     </div>
+    <footer>
+        <button class="fun-button" onclick="dropEmoji()">
+            <!-- <span class="button-text">Click this: </span> -->
+            <span class="button-emoji" aria-hidden="true">🤔</span>
+        </button>
+    </footer>
 </body>
 </html>
+
+<script>
+  function dropEmoji() {
+    const emojis = ['🤔', '🧐', '🎨', '🏛️', '🤨'];
+    const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+
+    const emoji = document.createElement('div');
+    emoji.classList.add('falling-emoji');
+    emoji.textContent = randomEmoji;
+
+    // random horizontal position
+    emoji.style.left = Math.random() * window.innerWidth + 'px';
+
+    document.body.appendChild(emoji);
+
+    // remove emoji after animation
+    emoji.addEventListener('animationend', () => {
+      emoji.remove();
+    });
+  }
+</script>

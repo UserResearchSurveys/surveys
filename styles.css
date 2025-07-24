@@ -3,7 +3,7 @@
 }
 
 header {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 body {
@@ -18,19 +18,21 @@ h1 {
     font-size: 2.05rem;
 }
 
-p.description { color: #555; }
-p.completion-time {
-    font-style: italic;
-    color: #555;
-}
-
 .flex-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, 350px);
     justify-content: center;
     gap: 40px;
+
+    flex: 1;
+    padding: 1rem;
+    flex-wrap: grid;
+    box-sizing: border-box;
 }
 
+/*
+ * Card styles
+ */
 .card-link {
     text-decoration: none;
     color: inherit;
@@ -63,6 +65,7 @@ p.completion-time {
     object-fit: cover;
 }
 
+/* Card text styles */
 .card-txt {
     padding: 20px 30px;
     flex-grow: 1;
@@ -71,20 +74,25 @@ p.completion-time {
     display: flex;
     flex-direction: column;
 }
-
 .card-txt h3 { margin: 10px 0; }
 .card-txt p { 
     margin: 6px 0;
     font-size: 0.96rem;
 }
-.card-txt p.note {
+p.note {
     font-size: 0.96rem;
     font-weight: 570;
     font-style:italic;
     padding-top: 8px;
     margin-top: auto;
 }
+p.description { color: #555; }
+p.completion-time {
+    font-style: italic;
+    color: #555;
+}
 
+/* Coming Soon card overlay */
 .coming-soon {
     position: relative;
 }
@@ -114,5 +122,88 @@ p.completion-time {
 
     .card-link {
         width: 100%;
+    }
+}
+
+/* Footer */
+footer {
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Emoji animation */
+.falling-emoji {
+    position: fixed;
+    font-size: 2rem;
+    animation: fall 2.5s linear forwards;
+    pointer-events: none;
+    z-index: 3;
+}
+
+@keyframes fall {
+    0% {
+        top: -50px;
+        opacity: 1;
+    }
+    100% {
+        top: 100vh;
+        opacity: 0;
+    }
+}
+
+/* Button styles */
+.back-button {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    touch-action: manipulation;
+}
+
+.back-button:hover {
+    background-color: #555;
+}
+
+/* Fun button!!!!!!!! */
+.fun-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.7rem 1.5rem;
+    /* font-size: 1.2rem; */
+    /* font-weight: bold; */
+    /* color: white; */
+    background: linear-gradient(135deg, #ff69b4, #ff85a2);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    touch-action: manipulation;
+}
+
+.button-emoji {
+    font-size: 1.8rem;
+    transition: transform 0.3s ease;
+}
+
+.fun-button:active {
+  filter: brightness(0.85);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .fun-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+    }
+    
+    .fun-button:hover .button-emoji {
+        transform: rotate(15deg) scale(1.1);
     }
 }
