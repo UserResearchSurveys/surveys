@@ -72,9 +72,7 @@ h1 {
     text-align: center;
 
     display: flex;
-    flex-direction: column;
-
-    /* margin: auto 0 0 0; */
+    flex-direction: column;    
 }
 .card-txt h3 { margin: 0.625rem 0; }
 .card-txt p { 
@@ -82,15 +80,17 @@ h1 {
     font-size: 0.96rem;
 }
 p.note {
-    font-size: 0.96rem;
-    font-weight: 600;
+    font-size: 0.83rem;
+    /* font-weight: 600; */
     font-style:italic;
     padding-top: 0.5rem;
     margin-top: auto;
+
+    color: #555;
 }
-/* p.note b {
-    font-weight: 600;
-} */
+b {
+    font-weight: 550;
+}
 p.description { color: #555; }
 p.completion-time {
     font-style: italic;
